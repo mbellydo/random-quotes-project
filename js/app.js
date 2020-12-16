@@ -31,3 +31,13 @@ const quotes = [
 ];
 
 // tu código aquí
+let button = document.querySelector('button')
+
+button.onclick = obtenerQuote
+
+function obtenerQuote(){
+    let randomQuote = Math.floor(Math.random() * (quotes.length))
+
+    document.querySelector('span#quote').innerHTML = quotes[randomQuote].quote
+    document.querySelector('span.quote-author').innerHTML = quotes[randomQuote].author
+}
